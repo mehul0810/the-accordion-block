@@ -56,7 +56,7 @@ class Block_Registration {
 		);
 
 		register_block_type( 
-			THE_ACCORDION_BLOCK_PLUGIN_DIR . 'build',
+			THE_ACCORDION_BLOCK_PLUGIN_DIR . 'build/block.json',
 			array(
 				'editor_script' => 'the-accordion-block-editor-script',
 			)
