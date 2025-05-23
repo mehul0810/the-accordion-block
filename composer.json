@@ -1,0 +1,26 @@
+{
+    "name": "mehul0810/the-accordion-block",
+    "description": "A plug-and-play Gutenberg block plugin for WordPress that lets you add beautiful, accessible, and SEO-optimized FAQ accordions anywhere on your site.",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Mehul Gohil",
+            "email": "hello@mehulgohil.com",
+            "homepage": "https://mehulgohil.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "AccordionBlock\\": "src/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.2"
+        }
+    }
+}

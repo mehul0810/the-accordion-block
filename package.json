@@ -1,0 +1,41 @@
+{
+  "name": "the-accordion-block",
+  "version": "1.0.0",
+  "description": "A plug-and-play Gutenberg block plugin for WordPress that lets you add beautiful, accessible, and SEO-optimized FAQ accordions anywhere on your site.",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:php": "composer run lint",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start"
+  },
+  "keywords": [
+    "wordpress",
+    "gutenberg",
+    "block",
+    "accordion",
+    "faq"
+  ],
+  "author": "Mehul Gohil",
+  "license": "GPL-3.0+",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehul0810/the-accordion-block.git"
+  },
+  "dependencies": {
+    "@wordpress/block-editor": "^12.5.0",
+    "@wordpress/blocks": "^12.13.0",
+    "@wordpress/components": "^25.3.0",
+    "@wordpress/compose": "^6.15.0",
+    "@wordpress/data": "^9.8.0",
+    "@wordpress/element": "^5.15.0",
+    "@wordpress/i18n": "^4.37.0"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^26.13.0"
+  }
+}

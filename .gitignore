@@ -1,0 +1,31 @@
+# Build files
+/build/
+/node_modules/
+/vendor/
+
+# npm package files
+/npm-debug.log
+/.pnp
+.pnp.js
+
+# Composer
+/composer.lock
+
+# Environment files
+/.env
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Editor and IDE files
+/.vscode/
+/.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*~
