@@ -1,0 +1,180 @@
+/**
+ * Accordion Block Styles (both editor and frontend)
+ */
+
+.wp-block-the-accordion-block-accordion-block {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+
+	& .the-accordion-block__header {
+		position: relative;
+	}
+
+	& .the-accordion-block__button {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		padding: 0.75em 1em;
+		cursor: pointer;
+		text-align: left;
+		background-color: #f7f7f7;
+		border: 1px solid #ddd;
+		border-radius: 4px 4px 0 0;
+		font-size: 1em;
+		line-height: 1.4;
+		font-weight: 500;
+		
+		&:hover {
+			background-color: #f0f0f0;
+		}
+		
+		&:focus {
+			outline: 2px solid #007cba;
+			outline-offset: 2px;
+		}
+	}
+
+	& .the-accordion-block__question-text {
+		flex: 1;
+	}
+
+	& .the-accordion-block__icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+		transition: transform 0.3s ease;
+		
+		& svg {
+			width: 1em;
+			height: 1em;
+			fill: currentColor;
+		}
+		
+		&--before {
+			margin-right: 0.5em;
+		}
+		
+		&--after {
+			margin-left: 0.5em;
+		}
+	}
+
+	& .the-accordion-block__content {
+		background-color: #fff;
+		border: 1px solid #ddd;
+		border-top: none;
+		border-radius: 0 0 4px 4px;
+		overflow: hidden;
+		max-height: 0;
+		opacity: 0;
+		transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+		
+		& .the-accordion-block__content-inner {
+			padding: 1em;
+		}
+	}
+	
+	/* Default closed state */
+	& .the-accordion-block__button[aria-expanded="false"] {
+		border-radius: 4px;
+		
+		& + .the-accordion-block__content {
+			max-height: 0;
+			opacity: 0;
+			visibility: hidden;
+		}
+		
+		& .the-accordion-block__icon {
+			&--after svg, &--before svg {
+				transform: rotate(0);
+			}
+		}
+	}
+	
+	/* Open state */
+	& .the-accordion-block__button[aria-expanded="true"] {
+		border-radius: 4px 4px 0 0;
+		
+		& + .the-accordion-block__content {
+			max-height: 2000px;
+			opacity: 1;
+			visibility: visible;
+		}
+		
+		& .the-accordion-block__icon {
+			&--after svg, &--before svg {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	
+	/* Plus/Minus icon special handling */
+	& .the-accordion-block__button[aria-expanded="false"] {
+		& .the-accordion-block__icon svg .minus-icon {
+			display: none;
+		}
+		& .the-accordion-block__icon svg .plus-icon {
+			display: block;
+		}
+	}
+	
+	& .the-accordion-block__button[aria-expanded="true"] {
+		& .the-accordion-block__icon svg .plus-icon {
+			display: none;
+		}
+		& .the-accordion-block__icon svg .minus-icon {
+			display: block;
+		}
+	}
+
+	/* Style variants */
+	&.is-style-default {
+		& .the-accordion-block__button {
+			background-color: var(--wp--preset--color--primary, #007cba);
+			color: #fff;
+			border: none;
+		}
+		
+		& .the-accordion-block__content {
+			border: 1px solid #ddd;
+			border-top: none;
+		}
+	}
+	
+	/* Modern style */
+	&.is-style-modern {
+		& .the-accordion-block__button {
+			background-color: #fff;
+			color: #333;
+			border: none;
+			border-radius: 0;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+		}
+		
+		& .the-accordion-block__content {
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			border: none;
+		}
+	}
+	
+	/* Minimal style */
+	&.is-style-minimal {
+		& .the-accordion-block__button {
+			background-color: transparent;
+			color: #333;
+			border: none;
+			border-bottom: 1px solid #ddd;
+			border-radius: 0;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		
+		& .the-accordion-block__content {
+			border: none;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}

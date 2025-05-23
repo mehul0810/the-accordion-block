@@ -1,0 +1,129 @@
+/**
+ * Accordion Block Editor Styles
+ */
+
+.wp-block-the-accordion-block-accordion-block {
+	margin-bottom: 1.5em;
+
+	& .the-accordion-block__header {
+		position: relative;
+	}
+
+	& .the-accordion-block__button {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		padding: 0.75em 1em;
+		cursor: pointer;
+		text-align: left;
+		background-color: #f7f7f7;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		font-size: 1em;
+		line-height: 1.4;
+		font-weight: 500;
+		
+		&:hover {
+			background-color: #f0f0f0;
+		}
+		
+		&:focus {
+			outline: 2px solid #007cba;
+			outline-offset: 2px;
+		}
+	}
+
+	& .the-accordion-block__question-text {
+		flex: 1;
+	}
+
+	& .the-accordion-block__icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+		
+		& svg {
+			width: 1em;
+			height: 1em;
+			transition: transform 0.3s ease;
+		}
+		
+		&--before {
+			margin-right: 0.5em;
+		}
+		
+		&--after {
+			margin-left: 0.5em;
+		}
+	}
+	
+	&.is-selected, &.has-child-selected {
+		& .the-accordion-block__content {
+			display: block !important;
+			border: 1px solid #ddd;
+			border-top: none;
+			border-radius: 0 0 4px 4px;
+		}
+	}
+	
+	& .the-accordion-block__content {
+		background-color: #fff;
+		
+		& .the-accordion-block__content-inner {
+			padding: 1em;
+		}
+	}
+
+	/* Style variants */
+	&.is-style-default {
+		& .the-accordion-block__button {
+			background-color: var(--wp--preset--color--primary, #007cba);
+			color: #fff;
+			border: none;
+			border-radius: 4px 4px 0 0;
+		}
+		
+		& .the-accordion-block__content {
+			border: 1px solid #ddd;
+			border-top: none;
+			border-radius: 0 0 4px 4px;
+		}
+	}
+	
+	/* Modern style */
+	&.is-style-modern {
+		& .the-accordion-block__button {
+			background-color: #fff;
+			color: #333;
+			border: none;
+			border-radius: 0;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+		}
+		
+		& .the-accordion-block__content {
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			border: none;
+			border-radius: 0 0 4px 4px;
+		}
+	}
+	
+	/* Minimal style */
+	&.is-style-minimal {
+		& .the-accordion-block__button {
+			background-color: transparent;
+			color: #333;
+			border: none;
+			border-bottom: 1px solid #ddd;
+			border-radius: 0;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		
+		& .the-accordion-block__content {
+			border: none;
+			border-radius: 0;
+		}
+	}
+}
