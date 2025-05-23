@@ -6,11 +6,15 @@
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
 
-	.the-accordion-block__header {
-		position: relative;
+	.components-panel__body {
+		border: none;
 	}
 
-	.the-accordion-block__button {
+	.components-panel__body-title {
+		margin: 0;
+	}
+
+	.components-panel__body-toggle.the-accordion-block__button {
 		display: flex;
 		align-items: center;
 		width: 100%;
@@ -77,7 +81,7 @@
 	}
 	
 	// Default closed state
-	.the-accordion-block__button[aria-expanded="false"] {
+	.components-panel__body-toggle.the-accordion-block__button[aria-expanded="false"] {
 		border-radius: 4px;
 		
 		& + .the-accordion-block__content {
@@ -94,7 +98,7 @@
 	}
 	
 	// Open state
-	.the-accordion-block__button[aria-expanded="true"] {
+	.components-panel__body-toggle.the-accordion-block__button[aria-expanded="true"] {
 		border-radius: 4px 4px 0 0;
 		
 		& + .the-accordion-block__content {
@@ -111,7 +115,7 @@
 	}
 	
 	// Plus/Minus icon special handling
-	.the-accordion-block__button[aria-expanded="false"] {
+	.components-panel__body-toggle.the-accordion-block__button[aria-expanded="false"] {
 		.the-accordion-block__icon svg .minus-icon {
 			display: none;
 		}
@@ -120,7 +124,7 @@
 		}
 	}
 	
-	.the-accordion-block__button[aria-expanded="true"] {
+	.components-panel__body-toggle.the-accordion-block__button[aria-expanded="true"] {
 		.the-accordion-block__icon svg .plus-icon {
 			display: none;
 		}
@@ -134,7 +138,7 @@
 .wp-block-the-accordion-block-accordion-block {
 	// Default WPDS style
 	&.is-style-default {
-		.the-accordion-block__button {
+		.components-panel__body-toggle.the-accordion-block__button {
 			background-color: var(--wp--preset--color--primary, #007cba);
 			color: #fff;
 			border: none;
@@ -148,7 +152,7 @@
 	
 	// Modern style
 	&.is-style-modern {
-		.the-accordion-block__button {
+		.components-panel__body-toggle.the-accordion-block__button {
 			background-color: #fff;
 			color: #333;
 			border: none;
@@ -164,7 +168,7 @@
 	
 	// Minimal style
 	&.is-style-minimal {
-		.the-accordion-block__button {
+		.components-panel__body-toggle.the-accordion-block__button {
 			background-color: transparent;
 			color: #333;
 			border: none;

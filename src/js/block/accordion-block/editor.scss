@@ -5,32 +5,24 @@
 .wp-block-the-accordion-block-accordion-block {
 	margin-bottom: 1.5em;
 
-	.the-accordion-block__header {
-		position: relative;
+	.components-panel__body {
+		border: none;
 	}
 
-	.the-accordion-block__button {
-		display: flex;
-		align-items: center;
-		width: 100%;
+	.components-panel__body-title {
+		margin: 0;
+	}
+
+	.components-panel__body-toggle {
 		padding: 0.75em 1em;
-		cursor: pointer;
-		text-align: left;
-		background-color: #f7f7f7;
-		border: 1px solid #ddd;
 		border-radius: 4px;
 		font-size: 1em;
 		line-height: 1.4;
 		font-weight: 500;
-		
-		&:hover {
-			background-color: #f0f0f0;
-		}
-		
-		&:focus {
-			outline: 2px solid #007cba;
-			outline-offset: 2px;
-		}
+		text-align: left;
+		width: 100%;
+		display: flex;
+		align-items: center;
 	}
 
 	.the-accordion-block__question-text {
@@ -81,7 +73,7 @@
 .wp-block-the-accordion-block-accordion-block {
 	// Default WPDS style
 	&.is-style-default {
-		.the-accordion-block__button {
+		.components-panel__body-toggle {
 			background-color: var(--wp--preset--color--primary, #007cba);
 			color: #fff;
 			border: none;
@@ -97,7 +89,7 @@
 	
 	// Modern style
 	&.is-style-modern {
-		.the-accordion-block__button {
+		.components-panel__body-toggle {
 			background-color: #fff;
 			color: #333;
 			border: none;
@@ -114,7 +106,7 @@
 	
 	// Minimal style
 	&.is-style-minimal {
-		.the-accordion-block__button {
+		.components-panel__body-toggle {
 			background-color: transparent;
 			color: #333;
 			border: none;

@@ -92,37 +92,41 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<div {...blockProps}>
-				<div className="the-accordion-block__header">
-					<button
-						className="the-accordion-block__button"
-						aria-expanded={defaultOpen}
+				<div className="components-panel">
+					<div className="components-panel__body the-accordion-block__header">
+						<h2 className="components-panel__body-title">
+							<button
+								className="components-button components-panel__body-toggle the-accordion-block__button"
+								aria-expanded={defaultOpen}
+							>
+								{iconPosition === 'before' && (
+									<span className="the-accordion-block__icon the-accordion-block__icon--before">
+										{selectedIcon}
+									</span>
+								)}
+								<RichText
+									tagName="span"
+									className="the-accordion-block__question-text"
+									value={question}
+									onChange={(value) => setAttributes({ question: value })}
+									placeholder={__('Add accordion question…', 'the-accordion-block')}
+								/>
+								{iconPosition === 'after' && (
+									<span className="the-accordion-block__icon the-accordion-block__icon--after">
+										{selectedIcon}
+									</span>
+								)}
+							</button>
+						</h2>
+					</div>
+					<div
+						className="the-accordion-block__content"
+						aria-hidden={!defaultOpen}
+						style={{ display: defaultOpen ? 'block' : 'none' }}
 					>
-						{iconPosition === 'before' && (
-							<span className="the-accordion-block__icon the-accordion-block__icon--before">
-								{selectedIcon}
-							</span>
-						)}
-						<RichText
-							tagName="span"
-							className="the-accordion-block__question-text"
-							value={question}
-							onChange={(value) => setAttributes({ question: value })}
-							placeholder={__('Add accordion question…', 'the-accordion-block')}
-						/>
-						{iconPosition === 'after' && (
-							<span className="the-accordion-block__icon the-accordion-block__icon--after">
-								{selectedIcon}
-							</span>
-						)}
-					</button>
-				</div>
-				<div
-					className="the-accordion-block__content"
-					aria-hidden={!defaultOpen}
-					style={{ display: defaultOpen ? 'block' : 'none' }}
-				>
-					<div className="the-accordion-block__content-inner">
-						<InnerBlocks />
+						<div className="the-accordion-block__content-inner">
+							<InnerBlocks />
+						</div>
 					</div>
 				</div>
 			</div>
