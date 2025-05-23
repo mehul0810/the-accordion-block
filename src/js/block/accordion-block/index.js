@@ -18,7 +18,7 @@ import './editor.scss';
 import metadata from './block.json';
 import Edit from './edit';
 import save from './save';
-import { accordion } from './icon';
+import { accordion } from './icons';
 
 /**
  * Register the block
