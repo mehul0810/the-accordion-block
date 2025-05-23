@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	const accordions = document.querySelectorAll('.wp-block-the-accordion-block-accordion-block');
 
 	accordions.forEach(function(accordion) {
-		const button = accordion.querySelector('.the-accordion-block__button');
+		const button = accordion.querySelector('.components-panel__body-toggle');
 		const content = accordion.querySelector('.the-accordion-block__content');
 
 		if (!button || !content) {
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 
 	// Add keyboard navigation between accordions
-	const accordionButtons = document.querySelectorAll('.the-accordion-block__button');
+	const accordionButtons = document.querySelectorAll('.components-panel__body-toggle');
 	accordionButtons.forEach(function(button, index) {
 		button.addEventListener('keydown', function(event) {
 			// Handle arrow keys for navigation
