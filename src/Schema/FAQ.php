@@ -164,10 +164,16 @@ class FAQ {
 	 * @return boolean Whether FAQ schema is output by the SEO plugin.
 	 */
 	private function is_schema_output_by_seo_plugin() {
+		global $post;
+		
+		// If no post, return false.
+		if ( ! is_object( $post ) ) {
+			return false;
+		}
+
 		// Check for Yoast SEO.
 		if ( function_exists( 'YoastSEO' ) ) {
 			// Yoast SEO has FAQ schema blocks.
-			global $post;
 			if ( has_block( 'yoast/faq-block', $post ) ) {
 				return true;
 			}
@@ -176,7 +182,8 @@ class FAQ {
 		// Check for Rank Math.
 		if ( class_exists( '\\RankMath\\Schema\\Schema' ) ) {
 			// If Rank Math is managing schema, let it handle it.
-			if ( has_action( 'wp_footer', 'rank_math_add_structured_data' ) ) {
+			if ( has_action( 'wp_footer', 'rank_math_add_structured_data' ) || 
+				has_action( 'wp_head', 'rank_math_add_structured_data' ) ) {
 				return true;
 			}
 		}

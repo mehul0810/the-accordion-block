@@ -46,8 +46,20 @@ class Block_Registration {
 	 */
 	public function register_block() {
 		// Register the block using block.json.
+		$asset_file = include THE_ACCORDION_BLOCK_PLUGIN_DIR . 'build/index.asset.php';
+		
+		wp_register_script(
+			'the-accordion-block-editor-script',
+			THE_ACCORDION_BLOCK_PLUGIN_URL . 'build/index.js',
+			$asset_file['dependencies'],
+			$asset_file['version']
+		);
+
 		register_block_type( 
-			THE_ACCORDION_BLOCK_PLUGIN_DIR . 'build' 
+			THE_ACCORDION_BLOCK_PLUGIN_DIR . 'build',
+			array(
+				'editor_script' => 'the-accordion-block-editor-script',
+			)
 		);
 	}
 

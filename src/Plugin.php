@@ -107,6 +107,11 @@ class Plugin {
 	 * @return boolean True if a supported SEO plugin is active, false otherwise.
 	 */
 	private function is_seo_plugin_active() {
+		// Make sure the plugin.php file is loaded for is_plugin_active function.
+		if ( ! function_exists( 'is_plugin_active' ) ) {
+			include_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
+
 		// Array of supported SEO plugins.
 		$seo_plugins = array(
 			'wordpress-seo/wp-seo.php',           // Yoast SEO.
