@@ -1,0 +1,123 @@
+<?php
+/**
+ * Block Registration Class
+ *
+ * @package AccordionBlock\Block
+ * @since 1.0.0
+ */
+
+namespace AccordionBlock\Block;
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Block Registration Class
+ *
+ * Handles the registration of the accordion block.
+ *
+ * @since 1.0.0
+ */
+class Block_Registration {
+
+	/**
+	 * Constructor.
+	 *
+	 * @since 1.0.0
+	 */
+	public function __construct() {
+		// Register the block.
+		add_action( 'init', array( $this, 'register_block' ) );
+
+		// Register block styles.
+		add_action( 'init', array( $this, 'register_block_styles' ) );
+
+		// Load editor assets.
+		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_editor_assets' ) );
+	}
+
+	/**
+	 * Register the accordion block.
+	 *
+	 * @since 1.0.0
+	 * @return void
+	 */
+	public function register_block() {
+		// Register the block using block.json.
+		register_block_type( 
+			THE_ACCORDION_BLOCK_PLUGIN_DIR . 'build' 
+		);
+	}
+
+	/**
+	 * Register block styles.
+	 *
+	 * @since 1.0.0
+	 * @return void
+	 */
+	public function register_block_styles() {
+		// Register default style (WordPress Design System).
+		register_block_style(
+			'the-accordion-block/accordion-block',
+			array(
+				'name'         => 'default',
+				'label'        => __( 'Default (WPDS)', 'the-accordion-block' ),
+				'is_default'   => true,
+				'inline_style' => '',
+			)
+		);
+
+		// Register modern style.
+		register_block_style(
+			'the-accordion-block/accordion-block',
+			array(
+				'name'         => 'modern',
+				'label'        => __( 'Modern', 'the-accordion-block' ),
+				'inline_style' => '',
+			)
+		);
+
+		// Register minimal style.
+		register_block_style(
+			'the-accordion-block/accordion-block',
+			array(
+				'name'         => 'minimal',
+				'label'        => __( 'Minimal', 'the-accordion-block' ),
+				'inline_style' => '',
+			)
+		);
+	}
+
+	/**
+	 * Enqueue editor assets.
+	 *
+	 * @since 1.0.0
+	 * @return void
+	 */
+	public function enqueue_editor_assets() {
+		// Enqueue editor script.
+		wp_enqueue_script(
+			'the-accordion-block-editor',
+			THE_ACCORDION_BLOCK_PLUGIN_URL . 'build/index.js',
+			array(
+				'wp-blocks',
+				'wp-i18n',
+				'wp-element',
+				'wp-block-editor',
+				'wp-components',
+			),
+			THE_ACCORDION_BLOCK_VERSION,
+			true
+		);
+
+		// Enqueue editor styles.
+		wp_enqueue_style(
+			'the-accordion-block-editor',
+			THE_ACCORDION_BLOCK_PLUGIN_URL . 'build/index.css',
+			array( 'wp-edit-blocks' ),
+			THE_ACCORDION_BLOCK_VERSION
+		);
+	}
+}
