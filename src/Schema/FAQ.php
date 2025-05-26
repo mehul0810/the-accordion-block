@@ -114,6 +114,20 @@ class FAQ {
 						);
 					}
 				}
+				
+				// If it's a FAQ item block, extract FAQ item.
+				if ( 'the-accordion-block/faq-item' === $block['blockName'] ) {
+					$question = ! empty( $block['attrs']['question'] ) ? $block['attrs']['question'] : '';
+					$answer   = ! empty( $block['innerHTML'] ) ? $this->get_inner_html_content( $block['innerHTML'] ) : '';
+
+					// Add to FAQ items if both question and answer exist.
+					if ( $question && $answer ) {
+						$faq_items[] = array(
+							'question' => $question,
+							'answer'   => $answer,
+						);
+					}
+				}
 
 				// Check for nested blocks in innerBlocks.
 				if ( ! empty( $block['innerBlocks'] ) ) {

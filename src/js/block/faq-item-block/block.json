@@ -1,0 +1,40 @@
+{
+  "name": "the-accordion-block/faq-item",
+  "title": "FAQ Item",
+  "category": "design",
+  "description": "An individual FAQ item with question and answer.",
+  "keywords": ["accordion", "faq", "question", "answer"],
+  "textdomain": "the-accordion-block",
+  "attributes": {
+    "question": {
+      "type": "string",
+      "source": "html",
+      "selector": ".the-accordion-block__question-text"
+    },
+    "icon": {
+      "type": "string",
+      "default": "chevron"
+    },
+    "iconPosition": {
+      "type": "string",
+      "default": "after"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "color": {
+      "text": true,
+      "background": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    }
+  },
+  "usesContext": ["the-accordion-block/defaultOpenFirst"],
+  "parent": ["the-accordion-block/faq"],
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

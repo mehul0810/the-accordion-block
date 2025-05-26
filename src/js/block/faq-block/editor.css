@@ -1,0 +1,21 @@
+/**
+ * Editor Styles for FAQ Block
+ */
+
+.the-accordion-block-faq {
+    margin-bottom: 20px;
+}
+
+.the-accordion-block-faq__items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Make sure all accordions are visibly open in the editor */
+.the-accordion-block-faq-item__content {
+    display: block !important;
+    height: auto !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+}

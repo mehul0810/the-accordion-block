@@ -1,0 +1,66 @@
+/**
+ * Frontend Styles for FAQ Item Block
+ */
+
+.the-accordion-block-faq-item {
+    margin-bottom: 10px;
+}
+
+.the-accordion-block-faq-item__title {
+    margin: 0;
+}
+
+.the-accordion-block-faq-item__button {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: transparent;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.the-accordion-block-faq-item__icon {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.the-accordion-block-faq-item__icon--before {
+    margin-right: 12px;
+}
+
+.the-accordion-block-faq-item__icon--after {
+    margin-left: 12px;
+}
+
+.the-accordion-block-faq-item__icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Rotate icon when open */
+.the-accordion-block-faq-item--open .the-accordion-block-faq-item__icon svg,
+.the-accordion-block-faq-item__button[aria-expanded="true"] .the-accordion-block-faq-item__icon svg {
+    transform: rotate(180deg);
+}
+
+.the-accordion-block-faq-item__content {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.the-accordion-block-faq-item__content[aria-hidden="false"] {
+    height: auto;
+    opacity: 1;
+}
+
+.the-accordion-block-faq-item__content-inner {
+    padding: 0 16px 16px;
+}

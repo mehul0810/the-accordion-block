@@ -44,6 +44,14 @@ config.plugins.push(
 				from: 'src/js/block/accordion-block/block.json',
 				to: 'block.json',
 			},
+			{
+				from: 'src/js/block/faq-block/block.json',
+				to: 'faq-block.json',
+			},
+			{
+				from: 'src/js/block/faq-item-block/block.json',
+				to: 'faq-item-block.json',
+			},
 		],
 	})
 );
