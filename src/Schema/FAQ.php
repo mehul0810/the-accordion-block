@@ -102,21 +102,7 @@ class FAQ {
 		$extract_faq_items = function ( $blocks ) use ( &$extract_faq_items, &$faq_items ) {
 			foreach ( $blocks as $block ) {
 				// If it's an accordion block, extract FAQ item.
-				if ( 'the-accordion-block/accordion-block' === $block['blockName'] ) {
-					$question = ! empty( $block['attrs']['question'] ) ? $block['attrs']['question'] : '';
-					$answer   = ! empty( $block['innerHTML'] ) ? $this->get_inner_html_content( $block['innerHTML'] ) : '';
-
-					// Add to FAQ items if both question and answer exist.
-					if ( $question && $answer ) {
-						$faq_items[] = array(
-							'question' => $question,
-							'answer'   => $answer,
-						);
-					}
-				}
-				
-				// If it's a FAQ item block, extract FAQ item.
-				if ( 'the-accordion-block/faq-item' === $block['blockName'] ) {
+				if ( 'the-accordion-block/accordion' === $block['blockName'] ) {
 					$question = ! empty( $block['attrs']['question'] ) ? $block['attrs']['question'] : '';
 					$answer   = ! empty( $block['innerHTML'] ) ? $this->get_inner_html_content( $block['innerHTML'] ) : '';
 

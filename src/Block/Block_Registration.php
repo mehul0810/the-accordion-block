@@ -103,7 +103,7 @@ class Block_Registration {
 	private function register_accordion_block_styles() {
 		// Register default style (WordPress Design System).
 		register_block_style(
-			'the-accordion-block/accordion-block',
+			'the-accordion-block/accordion',
 			array(
 				'name'         => 'default',
 				'label'        => __( 'Default (WPDS)', 'the-accordion-block' ),
@@ -114,7 +114,7 @@ class Block_Registration {
 
 		// Register modern style.
 		register_block_style(
-			'the-accordion-block/accordion-block',
+			'the-accordion-block/accordion',
 			array(
 				'name'         => 'modern',
 				'label'        => __( 'Modern', 'the-accordion-block' ),
@@ -124,7 +124,7 @@ class Block_Registration {
 
 		// Register minimal style.
 		register_block_style(
-			'the-accordion-block/accordion-block',
+			'the-accordion-block/accordion',
 			array(
 				'name'         => 'minimal',
 				'label'        => __( 'Minimal', 'the-accordion-block' ),
@@ -142,7 +142,7 @@ class Block_Registration {
 	private function register_faq_block_styles() {
 		// Register default style (WordPress Design System).
 		register_block_style(
-			'the-accordion-block/faq',
+			'the-accordion-block/accordion',
 			array(
 				'name'         => 'default',
 				'label'        => __( 'Default (WPDS)', 'the-accordion-block' ),
@@ -153,7 +153,7 @@ class Block_Registration {
 
 		// Register modern style.
 		register_block_style(
-			'the-accordion-block/faq',
+			'the-accordion-block/accordion',
 			array(
 				'name'         => 'modern',
 				'label'        => __( 'Modern', 'the-accordion-block' ),
@@ -163,7 +163,7 @@ class Block_Registration {
 
 		// Register minimal style.
 		register_block_style(
-			'the-accordion-block/faq',
+			'the-accordion-block/accordion',
 			array(
 				'name'         => 'minimal',
 				'label'        => __( 'Minimal', 'the-accordion-block' ),

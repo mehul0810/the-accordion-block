@@ -29,8 +29,8 @@ export default function Edit({ attributes, setAttributes }) {
 	});
 
 	// Define the allowed blocks and template
-	const ALLOWED_BLOCKS = ['the-accordion-block/faq-item'];
-	const TEMPLATE = [['the-accordion-block/faq-item', {}]];
+	const ALLOWED_BLOCKS = ['the-accordion-block/accordion-item'];
+	const TEMPLATE = [['the-accordion-block/accordion-item', {}]];
 
 	// Use InnerBlocks for the FAQ items
 	const innerBlocksProps = useInnerBlocksProps(

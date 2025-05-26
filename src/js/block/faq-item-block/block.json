@@ -1,5 +1,5 @@
 {
-  "name": "the-accordion-block/faq-item",
+  "name": "the-accordion-block/accordion-item",
   "title": "FAQ Item",
   "category": "design",
   "description": "An individual FAQ item with question and answer.",
@@ -33,7 +33,7 @@
     }
   },
   "usesContext": ["the-accordion-block/defaultOpenFirst"],
-  "parent": ["the-accordion-block/faq"],
+  "parent": ["the-accordion-block/accordion"],
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css"

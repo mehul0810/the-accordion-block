@@ -1,5 +1,5 @@
 {
-  "name": "the-accordion-block/faq",
+  "name": "the-accordion-block/accordion",
   "title": "FAQ Accordion",
   "category": "design",
   "description": "Add beautiful, accessible, and SEO-optimized FAQ accordions anywhere on your site.",
@@ -38,7 +38,7 @@
     },
     "innerBlocks": [
       {
-        "name": "the-accordion-block/faq-item",
+        "name": "the-accordion-block/accordion-item",
         "attributes": {
           "question": "What is the FAQ Accordion Block?",
           "icon": "chevron",
@@ -54,7 +54,7 @@
         ]
       },
       {
-        "name": "the-accordion-block/faq-item",
+        "name": "the-accordion-block/accordion-item",
         "attributes": {
           "question": "How do I add new FAQ items?",
           "icon": "chevron",
