@@ -55,8 +55,25 @@ class Block_Registration {
 			$asset_file['version']
 		);
 
+		// Register the accordion block.
 		register_block_type( 
 			THE_ACCORDION_BLOCK_PLUGIN_DIR . 'build/block.json',
+			array(
+				'editor_script' => 'the-accordion-block-editor-script',
+			)
+		);
+		
+		// Register the FAQ block.
+		register_block_type( 
+			THE_ACCORDION_BLOCK_PLUGIN_DIR . 'build/faq-block.json',
+			array(
+				'editor_script' => 'the-accordion-block-editor-script',
+			)
+		);
+		
+		// Register the FAQ item block.
+		register_block_type( 
+			THE_ACCORDION_BLOCK_PLUGIN_DIR . 'build/faq-item-block.json',
 			array(
 				'editor_script' => 'the-accordion-block-editor-script',
 			)
@@ -70,9 +87,23 @@ class Block_Registration {
 	 * @return void
 	 */
 	public function register_block_styles() {
+		// Register styles for the accordion block.
+		$this->register_accordion_block_styles();
+		
+		// Register styles for the FAQ block.
+		$this->register_faq_block_styles();
+	}
+	
+	/**
+	 * Register styles for the accordion block.
+	 *
+	 * @since 1.0.0
+	 * @return void
+	 */
+	private function register_accordion_block_styles() {
 		// Register default style (WordPress Design System).
 		register_block_style(
-			'the-accordion-block/accordion-block',
+			'the-accordion-block/accordion',
 			array(
 				'name'         => 'default',
 				'label'        => __( 'Default (WPDS)', 'the-accordion-block' ),
@@ -83,7 +114,7 @@ class Block_Registration {
 
 		// Register modern style.
 		register_block_style(
-			'the-accordion-block/accordion-block',
+			'the-accordion-block/accordion',
 			array(
 				'name'         => 'modern',
 				'label'        => __( 'Modern', 'the-accordion-block' ),
@@ -93,7 +124,46 @@ class Block_Registration {
 
 		// Register minimal style.
 		register_block_style(
-			'the-accordion-block/accordion-block',
+			'the-accordion-block/accordion',
+			array(
+				'name'         => 'minimal',
+				'label'        => __( 'Minimal', 'the-accordion-block' ),
+				'inline_style' => '',
+			)
+		);
+	}
+	
+	/**
+	 * Register styles for the FAQ block.
+	 *
+	 * @since 1.0.0
+	 * @return void
+	 */
+	private function register_faq_block_styles() {
+		// Register default style (WordPress Design System).
+		register_block_style(
+			'the-accordion-block/accordion',
+			array(
+				'name'         => 'default',
+				'label'        => __( 'Default (WPDS)', 'the-accordion-block' ),
+				'is_default'   => true,
+				'inline_style' => '',
+			)
+		);
+
+		// Register modern style.
+		register_block_style(
+			'the-accordion-block/accordion',
+			array(
+				'name'         => 'modern',
+				'label'        => __( 'Modern', 'the-accordion-block' ),
+				'inline_style' => '',
+			)
+		);
+
+		// Register minimal style.
+		register_block_style(
+			'the-accordion-block/accordion',
 			array(
 				'name'         => 'minimal',
 				'label'        => __( 'Minimal', 'the-accordion-block' ),

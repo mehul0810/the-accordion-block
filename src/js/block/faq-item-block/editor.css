@@ -1,0 +1,53 @@
+/**
+ * Editor Styles for FAQ Item Block
+ */
+
+.the-accordion-block-faq-item {
+    margin-bottom: 10px;
+}
+
+.the-accordion-block-faq-item__title {
+    margin: 0;
+}
+
+.the-accordion-block-faq-item__button {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    padding: 12px 16px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 2px;
+}
+
+.the-accordion-block-faq-item__icon {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.the-accordion-block-faq-item__icon--before {
+    margin-right: 12px;
+}
+
+.the-accordion-block-faq-item__icon--after {
+    margin-left: 12px;
+}
+
+.the-accordion-block-faq-item__icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.the-accordion-block-faq-item__content {
+    padding: 0 16px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.the-accordion-block-faq-item__content-inner {
+    padding: 16px 0;
+}

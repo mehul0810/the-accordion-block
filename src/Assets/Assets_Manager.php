@@ -86,8 +86,8 @@ class Assets_Manager {
 			return false;
 		}
 
-		// Check if the accordion block is used in the content.
-		if ( has_block( 'the-accordion-block/accordion-block', $post ) ) {
+		// Check if any of our blocks are used in the content.
+		if ( has_block( 'the-accordion-block/accordion', $post ) ) {
 			return true;
 		}
 
@@ -100,7 +100,7 @@ class Assets_Manager {
 			$check_blocks = function ( $blocks ) use ( &$check_blocks ) {
 				foreach ( $blocks as $block ) {
 					// Check if it's an accordion block.
-					if ( 'the-accordion-block/accordion-block' === $block['blockName'] ) {
+					if ( 'the-accordion-block/accordion' === $block['blockName'] ) {
 						return true;
 					}
 
@@ -114,7 +114,9 @@ class Assets_Manager {
 					// Check if it's a reusable block.
 					if ( 'core/block' === $block['blockName'] && ! empty( $block['attrs']['ref'] ) ) {
 						$reusable_block = get_post( $block['attrs']['ref'] );
-						if ( $reusable_block && has_block( 'the-accordion-block/accordion-block', $reusable_block ) ) {
+						if ( $reusable_block && ( 
+							has_block( 'the-accordion-block/accordion', $reusable_block )
+						) ) {
 							return true;
 						}
 					}

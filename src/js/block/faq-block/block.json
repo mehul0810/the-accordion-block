@@ -1,0 +1,95 @@
+{
+  "name": "the-accordion-block/accordion",
+  "title": "FAQ Accordion",
+  "category": "design",
+  "description": "Add beautiful, accessible, and SEO-optimized FAQ accordions anywhere on your site.",
+  "keywords": ["accordion", "faq", "collapse", "toggle", "expandable", "question", "answer"],
+  "textdomain": "the-accordion-block",
+  "attributes": {
+    "disableCss": {
+      "type": "boolean",
+      "default": false
+    },
+    "defaultOpenFirst": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": ["wide", "full"],
+    "color": {
+      "text": true,
+      "background": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    }
+  },
+  "example": {
+    "attributes": {
+      "defaultOpenFirst": true
+    },
+    "innerBlocks": [
+      {
+        "name": "the-accordion-block/accordion-item",
+        "attributes": {
+          "question": "What is the FAQ Accordion Block?",
+          "icon": "chevron",
+          "iconPosition": "after"
+        },
+        "innerBlocks": [
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "The FAQ Accordion Block is a Gutenberg block that allows you to add FAQ-style accordions to your website with rich content support."
+            }
+          }
+        ]
+      },
+      {
+        "name": "the-accordion-block/accordion-item",
+        "attributes": {
+          "question": "How do I add new FAQ items?",
+          "icon": "chevron",
+          "iconPosition": "after"
+        },
+        "innerBlocks": [
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "Click the '+' button at the bottom of the FAQ block to add a new FAQ item. You can also use the block inserter."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "styles": [
+    {
+      "name": "default",
+      "label": "Default (WPDS)",
+      "isDefault": true
+    },
+    {
+      "name": "modern",
+      "label": "Modern"
+    },
+    {
+      "name": "minimal",
+      "label": "Minimal"
+    }
+  ],
+  "providesContext": {
+    "the-accordion-block/defaultOpenFirst": "defaultOpenFirst"
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

@@ -11,7 +11,9 @@
     "lint:php": "composer run lint",
     "packages-update": "wp-scripts packages-update",
     "plugin-zip": "wp-scripts plugin-zip",
-    "start": "wp-scripts start"
+    "start": "wp-scripts start",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "keywords": [
     "wordpress",
@@ -38,6 +40,7 @@
   "devDependencies": {
     "@wordpress/scripts": "^26.13.0",
     "copy-webpack-plugin": "^13.0.0",
+    "cypress": "^13.6.6",
     "postcss-import": "^16.1.0",
     "postcss-nested": "^7.0.2"
   }

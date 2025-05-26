@@ -1,0 +1,89 @@
+/**
+ * Frontend Styles for FAQ Block
+ */
+
+.the-accordion-block-faq {
+    margin-bottom: 1.5rem;
+}
+
+.the-accordion-block-faq__items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Default WordPress Design System style */
+.wp-block-the-accordion-block-faq {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    box-sizing: border-box;
+}
+
+.wp-block-the-accordion-block-faq.is-style-default .the-accordion-block-faq-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.wp-block-the-accordion-block-faq.is-style-default .the-accordion-block-faq-item__header {
+    background-color: #fafafa;
+}
+
+.wp-block-the-accordion-block-faq.is-style-default .the-accordion-block-faq-item__button {
+    padding: 15px;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1e1e1e;
+}
+
+/* Modern style */
+.wp-block-the-accordion-block-faq.is-style-modern .the-accordion-block-faq-item {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.wp-block-the-accordion-block-faq.is-style-modern .the-accordion-block-faq-item__button {
+    padding: 18px 20px;
+    width: 100%;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1e1e1e;
+}
+
+/* Minimal style */
+.wp-block-the-accordion-block-faq.is-style-minimal .the-accordion-block-faq-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.wp-block-the-accordion-block-faq.is-style-minimal .the-accordion-block-faq-item__button {
+    padding: 15px 0;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1e1e1e;
+}

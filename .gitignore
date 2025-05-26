@@ -29,3 +29,7 @@ Thumbs.db
 *.sublime-workspace
 *.swp
 *~
+
+# Cypress
+/cypress/screenshots/
+/cypress/videos/
