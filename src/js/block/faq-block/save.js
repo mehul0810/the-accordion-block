@@ -17,7 +17,7 @@ export default function save({ attributes }) {
 	const { disableCss } = attributes;
 	
 	const blockProps = useBlockProps.save({
-		className: `the-accordion-block-faq ${disableCss ? 'the-accordion-block-faq--disable-css' : ''}`,
+		className: `the-accordion-block-faq ${disableCss ? 'the-accordion-block-faq--disable-css' : ''} ${attributes.defaultOpenFirst ? 'default-open-first' : ''}`,
 	});
 
 	// Use InnerBlocks.Content for the FAQ items

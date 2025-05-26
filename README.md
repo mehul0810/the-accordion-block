@@ -7,9 +7,9 @@ Zero configuration, modern design presets, FAQ schema support, and perfect theme
 
 ## Features
 
-- **Add Accordion FAQs Anywhere:**  
-  Instantly add a question and answer (rich content) using a single, reusable block.  
-  Supports patterns and block templates for efficient workflows.
+- **Add FAQ Accordions Anywhere:**  
+  Easily add multiple FAQ items with questions and rich content answers.  
+  Reorder, add, and remove FAQ items with intuitive UI.
 
 - **Rich Content Support:**  
   Use any block (text, images, lists, embeds) in the answer area. No limits.
@@ -66,7 +66,7 @@ Zero configuration, modern design presets, FAQ schema support, and perfect theme
 - **Preset Styles:**  
   Instantly switch between built-in design looks.
 - **Icon Picker:**  
-  Choose icon per accordion and set its position (before/after question).
+  Choose icon per FAQ item and set its position (before/after question).
 - **Disable Plugin CSS:**  
   Let your theme take full control of the accordion look.
 - **Default Open State:**  
